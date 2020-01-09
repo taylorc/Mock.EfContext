@@ -54,6 +54,7 @@ namespace Mock.EfContext.Application.UnitTests.TodoLists.Queries.GetTodos
 
             var result = await handler.Handle(query, CancellationToken.None);
 
+            //assert
             result.ShouldBeOfType<TodosVm>();
             result.Lists.Count.ShouldBe(1);
 
